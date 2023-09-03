@@ -57,7 +57,7 @@ const FlightTracker = (props) => {
   useEffect(() => {
     console.log(callSign);
     // Fetch flight data from the backend
-    let endpoint = `http://localhost:8000/flightTracker?callSign=${encodeURIComponent(
+    let endpoint = `https://aerofinder-api.onrender.com/flightTracker?callSign=${encodeURIComponent(
       callSign
     )}`;
     axios

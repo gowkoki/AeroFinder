@@ -13,7 +13,7 @@ const DepartureTab = ({ departureData }) => {
   // Handle clicking a flight to get more details
   const handleClick = async (flightNumber) => {
     try {
-      let endpoint = `http://localhost:8000/home?flightNumber=${flightNumber}`;
+      let endpoint = `https://aerofinder-api.onrender.com/home?flightNumber=${flightNumber}`;
       const response = await axios.get(endpoint);
 
       if (response.data.status === "success") {

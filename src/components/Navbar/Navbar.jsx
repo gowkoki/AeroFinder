@@ -32,7 +32,7 @@ const Navbar = () => {
   // Function to handle user logout
   const handleLogout = async () => {
     try {
-      let endpoint = "http://localhost:8000/logout";
+      let endpoint = "https://aerofinder-api.onrender.com/logout";
       const response = await axios.post(endpoint);
       console.log(response);
       if (response.data.status === "success") {
