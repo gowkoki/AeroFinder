@@ -14,7 +14,7 @@ const Login = () => {
       toast.warn("Please enter all the fields");
     } else {
       try {
-        let endpoint = "http://localhost:8000/login";
+        let endpoint = "https://aerofinder-api.onrender.com/login";
         const response = await axios.post(
           endpoint,
           {

@@ -33,7 +33,7 @@ export function Tabs({ children, flightNumber, onFlightDataUpdate }) {
 
     // Fetch the flight data based on selected tab
     try {
-      let endpoint = `http://localhost:8000/home?flightNumber=${flightNumber}&departDate=${formattedFullDate}`;
+      let endpoint = `https://aerofinder-api.onrender.com/home?flightNumber=${flightNumber}&departDate=${formattedFullDate}`;
       const response = await axios.get(endpoint);
       onFlightDataUpdate(response.data);
     } catch (error) {

@@ -151,7 +151,7 @@ const FlightStatus = (props) => {
         // Construct the map link
         const mapLink = `Gate location : ${
           flightData.data[0].departure.gate
-            ? `http://localhost:5173/map?gateAdd=${departureGateLoc.address}&lat=${departureGateLoc.latitude}&lon=${departureGateLoc.longitude}`
+            ? `https://aerofinder.onrender.com/map?gateAdd=${departureGateLoc.address}&lat=${departureGateLoc.latitude}&lon=${departureGateLoc.longitude}`
             : ""
         }`;
 
@@ -211,7 +211,7 @@ const FlightStatus = (props) => {
         };
 
         // sending the data to the server
-        let endpoint = "http://localhost:8000/notify";
+        let endpoint = "https://aerofinder-api.onrender.com/notify";
         const response = await axios.post(endpoint, {
           message: message,
           mapLink: mapLink,

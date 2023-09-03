@@ -15,7 +15,7 @@ const AirportMapData = () => {
   const handleCheckStatus = async () => {
     try {
       console.log(airportCode);
-      let endpoint = `http://localhost:8000/airportMap?airportCode=${airportCode}`;
+      let endpoint = `https://aerofinder-api.onrender.com/airportMap?airportCode=${airportCode}`;
       const response = await axios.get(endpoint);
 
       if (response.data.status === "success") {

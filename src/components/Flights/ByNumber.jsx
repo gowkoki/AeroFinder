@@ -12,7 +12,7 @@ const ByNumber = () => {
   // Function to handle the search button click and fetch flight information
   const handleCheckStatus = async () => {
     try {
-      let endpoint = `http://localhost:8000/home?flightNumber=${flightNumber}&departDate=${departDate}`;
+      let endpoint = `https://aerofinder-api.onrender.com/home?flightNumber=${flightNumber}&departDate=${departDate}`;
       const response = await axios.get(endpoint);
       setStatus(response.data.status);
       if (response.data.status === "success") {
