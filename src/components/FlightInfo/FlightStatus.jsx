@@ -149,9 +149,9 @@ const FlightStatus = (props) => {
         }`;
 
         // Construct the map link
-        const mapLink = `Departure Gate location : ${
+        const mapLink = `${
           flightData.data[0].departure.gate
-            ? `https://aerofinder.onrender.com/map?gateAdd=${encodeURIComponent(
+            ? `Departure Gate location : https://aerofinder.onrender.com/map?gateAdd=${encodeURIComponent(
                 departureGateLoc.address
               )}&lat=${departureGateLoc.latitude}&lon=${
                 departureGateLoc.longitude
