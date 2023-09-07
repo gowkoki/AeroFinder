@@ -27,7 +27,7 @@ const FlightHistory = (props) => {
   const nextDates = [1, 2, 3];
 
   return (
-    <div className="mt-9 mb-9">
+    <div className="mt-9 mb-9 overflow-x-auto">
       {/* Using the Tabs component to organize the UI */}
       <Tabs
         flightNumber={flightNumber}
