@@ -10,7 +10,7 @@ const Airports = () => {
   // Function to fetch the list of airlines from the API
   const fetchAirports = async () => {
     try {
-      let endpoint = "https://aerofinder-api.onrender.com/airports";
+      let endpoint = "https://aerofinderapi.onrender.com/airports";
 
       const airportsResponse = await axios.get(endpoint);
 

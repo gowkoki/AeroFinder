@@ -84,7 +84,7 @@ const RegisterForm = () => {
 
     //validate - email is already registered
     try {
-      const endpoint = `https://aerofinder-api.onrender.com/emailChecker?email=${email}`;
+      const endpoint = `https://aerofinderapi.onrender.com/emailChecker?email=${email}`;
       const emailExistResponse = await axios.get(endpoint);
       const data = emailExistResponse.data;
       //already registered
@@ -116,7 +116,7 @@ const RegisterForm = () => {
   const verifyMobile = async (mobile) => {
     try {
       const response = await axios.post(
-        `https://aerofinder-api.onrender.com/mobileV`,
+        `https://aerofinderapi.onrender.com/mobileV`,
         {
           mobile: mobile,
         }
@@ -141,7 +141,7 @@ const RegisterForm = () => {
   const verifyEmail = async (email) => {
     try {
       const emailResponse = await axios.get(
-        `https://aerofinder-api.onrender.com/emailValidation?email=${email}`
+        `https://aerofinderapi.onrender.com/emailValidation?email=${email}`
       );
 
       if (emailResponse.status === 200) {
@@ -231,7 +231,7 @@ const RegisterForm = () => {
         if (emailOtp === parsedUserEmailOtp) {
           // Email OTP is valid, save all the user data in the DB
           try {
-            let endpoint = "https://aerofinder-api.onrender.com/register";
+            let endpoint = "https://aerofinderapi.onrender.com/register";
             const registerResponse = await axios.post(endpoint, {
               firstName,
               lastName,

@@ -215,7 +215,7 @@ const FlightStatus = (props) => {
         };
 
         // sending the data to the server
-        let endpoint = "https://aerofinder-api.onrender.com/notify";
+        let endpoint = "https://aerofinderapi.onrender.com/notify";
         const response = await axios.post(endpoint, {
           message: message,
           mapLink: mapLink,
