@@ -36,7 +36,7 @@ const UserSetting = (userData) => {
     try {
       console.log(firstName, lastName, email, mobile, user_id);
       // Send the form data to the backend API
-      let endpoint = "https://aerofinder-api.onrender.com/myAccount/profile";
+      let endpoint = "https://aerofinderapi.onrender.com/myAccount/profile";
       const response = await axios.put(endpoint, {
         firstName,
         lastName,
@@ -72,7 +72,7 @@ const UserSetting = (userData) => {
         if (passwordStrength.score >= 3) {
           // Send the form data to the backend API
           let endpoint =
-            "https://aerofinder-api.onrender.com/myAccount/password";
+            "https://aerofinderapi.onrender.com/myAccount/password";
           const response = await axios.put(endpoint, {
             newPassword,
             currentPassword,
@@ -111,7 +111,7 @@ const UserSetting = (userData) => {
       // Send the user ID to the backend API for account deletion
       console.log(user_id);
       let endpoint =
-        "https://aerofinder-api.onrender.com/myAccount/deleteAccount";
+        "https://aerofinderapi.onrender.com/myAccount/deleteAccount";
       const response = await axios.delete(endpoint, {
         data: {
           user_id,

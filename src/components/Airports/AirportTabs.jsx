@@ -20,8 +20,8 @@ const AirportTabs = (props) => {
   const fetchDepartureData = async () => {
     try {
       // Endpoint URLs for departure/arrival and weather data
-      let depArrEndpoint = `https://aerofinder-api.onrender.com/airport/departure/arrival?airport=${airport}`;
-      let weatherEndpoint = `https://aerofinder-api.onrender.com/airport/weather?lat=${airportData.location.lat}&lon=${airportData.location.lon}`;
+      let depArrEndpoint = `https://aerofinderapi.onrender.com/airport/departure/arrival?airport=${airport}`;
+      let weatherEndpoint = `https://aerofinderapi.onrender.com/airport/weather?lat=${airportData.location.lat}&lon=${airportData.location.lon}`;
 
       // Fetch departure/arrival and weather data concurrently
       const [depArrResponse, weatherResponse] = await Promise.all([

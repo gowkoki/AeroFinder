@@ -18,8 +18,8 @@ const ByRoute = () => {
   // Function to fetch the list of airlines from the API
   const fetchAirlinesAndAirports = async () => {
     try {
-      let airlinesEndpoint = "https://aerofinder-api.onrender.com/airlines";
-      let airportsEndpoint = "https://aerofinder-api.onrender.com/airports";
+      let airlinesEndpoint = "https://aerofinderapi.onrender.com/airlines";
+      let airportsEndpoint = "https://aerofinderapi.onrender.com/airports";
 
       const [airlinesResponse, airportsResponse] = await Promise.all([
         axios.get(airlinesEndpoint),
@@ -69,7 +69,7 @@ const ByRoute = () => {
         return;
       }
 
-      let endpoint = `https://aerofinder-api.onrender.com/route?airlines=${airlines}&departAirport=${departAirport}&arrivalAirport=${arrivalAirport}&departDate=${departDate}&departTime=${departTime}`;
+      let endpoint = `https://aerofinderapi.onrender.com/route?airlines=${airlines}&departAirport=${departAirport}&arrivalAirport=${arrivalAirport}&departDate=${departDate}&departTime=${departTime}`;
       const response = await axios.get(endpoint);
       setStatus(
         response.data.data ? response.data.data.status : response.data.status
