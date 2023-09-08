@@ -15,7 +15,7 @@ const ByRoute = () => {
   const [departTime, setDepartTime] = useState("");
   const [status, setStatus] = useState("");
 
-  // Function to fetch the list of airlines from the API
+  // Function to fetch the list of airlines and airports from the API
   const fetchAirlinesAndAirports = async () => {
     try {
       let airlinesEndpoint = "https://aerofinderapi.onrender.com/airlines";

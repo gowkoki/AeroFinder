@@ -7,7 +7,7 @@ const Airports = () => {
   const [airport, setAirport] = useState("");
   const navigate = useNavigate();
 
-  // Function to fetch the list of airlines from the API
+  // Function to fetch the list of airports from the API
   const fetchAirports = async () => {
     try {
       let endpoint = "https://aerofinderapi.onrender.com/airports";
