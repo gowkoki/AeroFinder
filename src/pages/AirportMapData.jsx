@@ -11,7 +11,7 @@ const AirportMapData = () => {
   const [airportLon, setAirportLon] = useState("");
   const [airportData, setAirportData] = useState("");
 
-  //Request sent to the server to fetch the airport arrival and departure information
+  //Request sent to the server to fetch the airport information
   const handleCheckStatus = async () => {
     try {
       console.log(airportCode);
