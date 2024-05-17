@@ -423,12 +423,12 @@ const FlightStatus = (props) => {
                   {""}
                   <p className="text-m font-bold text-black mt-2">
                     {new Date(
-                      flightData.data[0].arrival.scheduledTimeLocal
-                    ).toLocaleDateString("en-US", {
-                      day: "2-digit",
-                      month: "long",
-                      year: "numeric",
-                    })}
+                      flightData.data[0].arrival.scheduledTime.local.replace('+02:00', 'Z')
+  ).toLocaleDateString("en-US", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  })}
                   </p>
                 </div>
 
@@ -442,11 +442,12 @@ const FlightStatus = (props) => {
                       <h1 className="text-xl font-bold">
                         {" "}
                         {new Date(
-                          flightData.data[0].arrival.scheduledTimeLocal
-                        ).toLocaleTimeString([], {
-                          hour: "2-digit",
-                          minute: "2-digit",
-                        })}
+                          flightData.data[0].arrival.scheduledTime.local.replace('+02:00', 'Z')
+  ).toLocaleDateString("en-US", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  })}
                       </h1>
                     </div>
                     <div
