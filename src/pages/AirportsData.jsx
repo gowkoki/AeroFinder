@@ -48,7 +48,7 @@ const AirportsInfo = () => {
               </h1>
             </div>
             <AirportTabs airport={airport} airportData={airportData} />
-{/*             <AirportInfo airportData={airportData} airportTime={airportTime} /> */}
+            <AirportInfo airportData={airportData} airportTime={airportTime} />
           </div>
         ) : null}
       </div>
