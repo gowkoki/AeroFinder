@@ -75,7 +75,7 @@ const DepartureTab = ({ departureData }) => {
                 <p className="text-xs">{flight.airline.name}</p>
               </th>
               <td className="px-6 py-4">
-                {flight.departure.revisedTime.local
+                {flight.departure.revisedTime?.local
                   ? flight.departure.revisedTime.local
                       .split(" ")[1]
                       .split("+")[0]
