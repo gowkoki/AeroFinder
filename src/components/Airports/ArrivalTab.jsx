@@ -76,7 +76,7 @@ const ArrivalTab = ({ arrivalData }) => {
                 <p className="text-xs">{flight.airline.name}</p>
               </th>
               <td className="px-6 py-4">
-                {flight.arrival.revisedTime.local
+                {flight.arrival.revisedTime?.local
                   ? flight.arrival.revisedTime.local.split(" ")[1].split("+")[0]
                   : flight.arrival.scheduledTime.local
                       .split(" ")[1]
