@@ -5,7 +5,7 @@ const AirportInfo = (props) => {
   const { airportData, airportTime } = props;
 
   // Parse the date and time from the provided format
-  const [datePart, timePart] = airportTime.localTime.split(" ");
+  const [datePart, timePart] = airportTime.time.local.split(" ");
 
   const timeFormatted = timePart.split("+")[0];
 
