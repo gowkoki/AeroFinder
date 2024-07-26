@@ -88,14 +88,14 @@ const FlightInformation = (props) => {
               arrAirportlon={flightData.data[0].arrival.airport.location.lon}
               callSign={flightData.data[0].callSign}
               depTime={
-                flightData.data[0].departure.actualTimeLocal
-                  ? flightData.data[0].departure.actualTimeLocal
-                  : flightData.data[0].departure.scheduledTimeLocal
+                flightData.data[0].departure.revisedTime.local
+                  ? flightData.data[0].departure.revisedTime.local
+                  : flightData.data[0].departure.revisedTime.local
               }
               arrTime={
-                flightData.data[0].arrival.actualTimeLocal
-                  ? flightData.data[0].arrival.actualTimeLocal
-                  : flightData.data[0].arrival.scheduledTimeLocal
+                flightData.data[0].arrival.revisedTime.local
+                  ? flightData.data[0].arrival.revisedTime.local
+                  : flightData.data[0].arrival.revisedTime.local
               }
             />
           ) : (
