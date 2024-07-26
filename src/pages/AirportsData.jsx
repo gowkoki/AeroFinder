@@ -47,8 +47,8 @@ const AirportsInfo = () => {
                 {airportData ? airportData.fullName : "XXX"}
               </h1>
             </div>
-{/*             <AirportTabs airport={airport} airportData={airportData} /> */}
-            <AirportInfo airportData={airportData} airportTime={airportTime} />
+            <AirportTabs airport={airport} airportData={airportData} />
+{/*             <AirportInfo airportData={airportData} airportTime={airportTime} /> */}
           </div>
         ) : null}
       </div>
