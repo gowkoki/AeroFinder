@@ -45,15 +45,15 @@ const FlightData = (props) => {
               {/* Display departure time */}
               <td className="px-6 py-4">
                 {flightData
-                  ? flightData.data[0].departure.actualTimeLocal
+                  ? flightData.data[0].departure.revisedTime.local
                     ? new Date(
-                        flightData.data[0].departure.actualTimeLocal
+                        flightData.data[0].departure.revisedTime.local
                       ).toLocaleTimeString([], {
                         hour: "2-digit",
                         minute: "2-digit",
                       })
                     : new Date(
-                        flightData.data[0].departure.scheduledTimeLocal
+                        flightData.data[0].departure.scheduledTime.local
                       ).toLocaleTimeString([], {
                         hour: "2-digit",
                         minute: "2-digit",
@@ -62,16 +62,16 @@ const FlightData = (props) => {
                 <p className="text-xs">
                   {/* Display departure date */}
                   {flightData
-                    ? flightData.data[0].departure.actualTimeLocal
+                    ? flightData.data[0].departure.revisedTime.local
                       ? new Date(
-                          flightData.data[0].departure.actualTimeLocal
+                          flightData.data[0].departure.revisedTime.local
                         ).toLocaleDateString("en-US", {
                           day: "2-digit",
                           month: "long",
                           year: "numeric",
                         })
                       : new Date(
-                          flightData.data[0].departure.scheduledTimeLocal
+                          flightData.data[0].departure.scheduledTime.local
                         ).toLocaleDateString("en-US", {
                           day: "2-digit",
                           month: "long",
@@ -99,30 +99,30 @@ const FlightData = (props) => {
               </td>
               {/* Display arrival time */}
               <td className="px-6 py-4">
-                {flightData.data[0].arrival.actualTimeLocal
+                {flightData.data[0].arrival.revisedTime.local
                   ? new Date(
-                      flightData.data[0].arrival.actualTimeLocal
+                      flightData.data[0].arrival.revisedTime.local
                     ).toLocaleTimeString([], {
                       hour: "2-digit",
                       minute: "2-digit",
                     })
                   : new Date(
-                      flightData.data[0].arrival.scheduledTimeLocal
+                      flightData.data[0].arrival.scheduledTime.local
                     ).toLocaleTimeString([], {
                       hour: "2-digit",
                       minute: "2-digit",
                     })}
                 <p className="text-xs">
-                  {flightData.data[0].arrival.actualTimeLocal
+                  {flightData.data[0].arrival.revisedTime.local
                     ? new Date(
-                        flightData.data[0].arrival.actualTimeLocal
+                        flightData.data[0].arrival.revisedTime.local
                       ).toLocaleDateString("en-US", {
                         day: "2-digit",
                         month: "long",
                         year: "numeric",
                       })
                     : new Date(
-                        flightData.data[0].arrival.scheduledTimeLocal
+                        flightData.data[0].arrival.scheduledTime.local
                       ).toLocaleDateString("en-US", {
                         day: "2-digit",
                         month: "long",
