@@ -68,26 +68,26 @@ const FlightStatus = (props) => {
         }\n\nDeparture Airport : ${
           flightData.data[0].departure.airport.iata
         }\nDeparture Time : ${
-          flightData.data[0].departure.actualTimeLocal
+          flightData.data[0].departure.revisedTime.local
             ? `${new Date(
-                flightData.data[0].departure.actualTimeLocal
+                flightData.data[0].departure.revisedTime.local
               ).toLocaleTimeString([], {
                 hour: "2-digit",
                 minute: "2-digit",
               })} (${new Date(
-                flightData.data[0].departure.actualTimeLocal
+                flightData.data[0].departure.revisedTime.local
               ).toLocaleDateString("en-US", {
                 day: "2-digit",
                 month: "long",
                 year: "numeric",
               })})`
             : `${new Date(
-                flightData.data[0].departure.scheduledTimeLocal
+                flightData.data[0].departure.scheduledTime.local
               ).toLocaleTimeString([], {
                 hour: "2-digit",
                 minute: "2-digit",
               })} (${new Date(
-                flightData.data[0].departure.scheduledTimeLocal
+                flightData.data[0].departure.scheduledTime.local
               ).toLocaleDateString("en-US", {
                 day: "2-digit",
                 month: "long",
@@ -109,26 +109,26 @@ const FlightStatus = (props) => {
         \n\nArrival Airport : ${
           flightData.data[0].arrival.airport.iata
         }\nArrival Time : ${
-          flightData.data[0].arrival.actualTimeLocal
+          flightData.data[0].arrival.revisedTime.local
             ? `${new Date(
-                flightData.data[0].arrival.actualTimeLocal
+                flightData.data[0].arrival.revisedTime.local
               ).toLocaleTimeString([], {
                 hour: "2-digit",
                 minute: "2-digit",
               })} (${new Date(
-                flightData.data[0].arrival.actualTimeLocal
+                flightData.data[0].arrival.revisedTime.local
               ).toLocaleDateString("en-US", {
                 day: "2-digit",
                 month: "long",
                 year: "numeric",
               })})`
             : `${new Date(
-                flightData.data[0].arrival.scheduledTimeLocal
+                flightData.data[0].arrival.scheduledTime.local
               ).toLocaleTimeString([], {
                 hour: "2-digit",
                 minute: "2-digit",
               })} (${new Date(
-                flightData.data[0].arrival.scheduledTimeLocal
+                flightData.data[0].arrival.scheduledTime.local
               ).toLocaleDateString("en-US", {
                 day: "2-digit",
                 month: "long",
@@ -166,10 +166,10 @@ const FlightStatus = (props) => {
           status: flightData.data[0].status,
           departure: {
             airport: flightData.data[0].departure.airport.iata,
-            scheduledTime: flightData.data[0].departure.scheduledTimeLocal,
+            scheduledTime: flightData.data[0].departure.scheduledTime.local,
             actualTime: `${
-              flightData.data[0].departure.actualTimeLocal
-                ? flightData.data[0].departure.actualTimeLocal
+              flightData.data[0].departure.revisedTime.local
+                ? flightData.data[0].departure.revisedTime.local
                 : "N/A"
             }`,
             terminal: `${
@@ -190,10 +190,10 @@ const FlightStatus = (props) => {
           },
           arrival: {
             airport: flightData.data[0].arrival.airport.iata,
-            scheduledTime: flightData.data[0].arrival.scheduledTimeLocal,
+            scheduledTime: flightData.data[0].arrival.scheduledTime.local,
             actualTime: `${
-              flightData.data[0].arrival.actualTimeLocal
-                ? flightData.data[0].arrival.actualTimeLocal
+              flightData.data[0].arrival.revisedTime.local
+                ? flightData.data[0].arrival.revisedTime.local
                 : "N/A"
             }`,
             terminal: `${
